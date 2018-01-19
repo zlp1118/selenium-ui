@@ -1,0 +1,27 @@
+<p>
+    test-tree works!
+</p>
+
+<button mat-button color="accent" (click)="runTest()">run</button>
+<button mat-button color="accent" (click)="stopTest()">stop</button>
+<button mat-button color="accent" (click)="rerunTest()">rerun</button>
+
+<button mat-button color="warn" (click)="runFind()">test</button>
+
+<button mat-button color="red" (click)="reloadPage()">reload</button>
+
+<div>
+    <label for="in-name">By.name</label>
+    <input #nameInput id="in-name" type="text">
+    <button mat-button color="warn" (click)="nameFind(nameInput.value)">find</button>
+</div>
+
+<div>
+    <label for="in-path">By.xpath</label>
+    <input #pathInput id="in-path" type="text">
+    <button mat-button color="warn" (click)="xpathFind(pathInput.value)" value="html/body/app-root">find</button>
+</div>
+
+<div>
+    <button mat-button color="#9999ff" (click)="runSingle()">single</button>
+</div>

@@ -1,14 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AppComponent} from './app.component';
 
-import { AppComponent } from './app.component';
+import {MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/material';
+import { TestTreeComponent } from './test-tree/test-tree.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestTreeComponent
   ],
   imports: [
-    BrowserModule
+      BrowserModule,
+      FormsModule,
+      BrowserAnimationsModule,
+      MatButtonModule,
+      MatCheckboxModule,
+      MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

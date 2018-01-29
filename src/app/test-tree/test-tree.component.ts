@@ -37,7 +37,7 @@ export class TestTreeComponent implements OnInit, OnDestroy {
 
         const fun = () => {
             console.log('fun() start');
-            exec('chrome-driver.exe', function (err, data) {
+            exec('./exe/chrome-driver.exe', function (err, data) {
                 console.log(err);
                 console.log(data.toString());
             });
@@ -397,7 +397,7 @@ export class TestTreeComponent implements OnInit, OnDestroy {
             .usingServer('http://localhost:9515') // "9515" ChromeDriver running port
             .withCapabilities({
                 chromeOptions: {
-                    binary: 'D:/language/angular/selenium/node_modules/electron/dist/electron.exe' // electron path
+                    binary: './exe/electron/dist/electron.exe' // electron path
                 }
             })
             .forBrowser('electron')
